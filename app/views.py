@@ -20,3 +20,4 @@ def view_sky(value):
 
 def view_temp(value):
     print(f'Температура: {value}')
+
