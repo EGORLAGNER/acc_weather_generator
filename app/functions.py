@@ -33,14 +33,18 @@ def _generate_type_weather(data_set):
 
 
 def main_script(rain_flag=False):
-    view_time(_get_game_parameter(TIME))
-    view_sky(_get_game_parameter(SKY))
-    view_temp((_get_game_parameter(TEMPERATURE)))
     weather = _generate_type_weather(DRY_OR_RAIN)
+    view_time(_get_game_parameter(TIME))
+
     if weather == 'дождь' or rain_flag is True:
-        view_weather(weather)
+        view_weather('ДОЖДЬ')
+        view_sky('100')
+        view_temp((_get_game_parameter(TEMPERATURE)))
         view_wet(_get_game_parameter(WET_VALUE))
         view_water(_get_game_parameter(WATER_ON_THE_TRACK))
+
     else:
-        view_weather(weather)
+        view_weather(weather.upper())
+        view_sky(_get_game_parameter(SKY))
+        view_temp((_get_game_parameter(TEMPERATURE)))
     print()

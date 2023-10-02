@@ -7,6 +7,7 @@ def view_weather(value):
 
 
 def view_wet(value):
+    print(f'Осадки: {value}')
     print(f'Влажность: {value}')
 
 
@@ -20,4 +21,3 @@ def view_sky(value):
 
 def view_temp(value):
     print(f'Температура: {value}')
-
